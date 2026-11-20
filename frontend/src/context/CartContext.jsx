@@ -10,6 +10,7 @@ export const useCart = () => useContext(CartContext);
 // Guests keep their bag in localStorage; logged-in users keep it in MongoDB.
 // When a guest logs in, the two are merged.
 const GUEST_KEY = 'glowvia_guest_cart';
+
 const readGuest = () => {
   try {
     return JSON.parse(localStorage.getItem(GUEST_KEY)) || [];
